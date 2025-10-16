@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Artabilitas - Ekspresi Artistik Kontemporer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font dan Warna Kustom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accentA': '#EF4444', // Merah Aksen (dari logo/branding)
+                        'accentB': '#1D4ED8', // Biru terang dari logo
+                        'darkBlue': '#1f2937', // Biru Tua/Navy
+                        'softGray': '#F3F4F6', // Latar belakang lembut
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Custom background for header to highlight the logo colors */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #172535 50%, #1D4ED8 100%);
+        }
+
+        /* Timeline vertical line */
+        .timeline-container {
+            position: relative;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #D1D5DB; /* light gray line */
+            transform: translateX(-50%);
+        }
+
+        /* Responsive adjustment for mobile */
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 20px;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Ensures images maintain aspect ratio and fill container */
+        .timeline-image {
+            width: 100%;
+            height: 200px; /* Fixed height for visual consistency */
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    .timeline-image1 {            width: 100%;
+            height: 200px; /* Fixed height for visual consistency */
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+}
+    </style>
+</head>
+<body class="font-sans antialiased bg-softGray text-gray-800">
+
+    <!-- Header Section -->
+    <header class="hero-gradient py-16 md:py-24 text-white shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Asumsi Logo-Artabilitas-4web.jpg ada di folder yang sama -->
+			<a href="https://artabilitas.wixsite.com/artabilitas" target="_blank" class="hover:opacity-80 transition duration-150" aria-label="Kunjungi Website Artabilitas">
+			<img src="https://artabilitas.netlify.app/logo-artabilitas-4web.jpg" alt="Logo Artabilitas" class="mx-auto h-20 w-auto mb-6 shadow-2xl rounded-lg">
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3">
+                Portofolio Artabilitas
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-gray-300 max-w-4xl mx-auto">
+                Perjalanan dari "Langkah Awal" hingga Menegaskan Eksistensi Artistik di Kancah Seni Rupa Mainstream.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content: Timeline Portfolio -->
+    <section id="portfolio-timeline" class="py-16 md:py-20">
+        <div class="container mx-auto px-4 timeline-container">
+            
+            <h2 class="text-3xl font-bold text-darkBlue text-center mb-12">Pencapaian Kunci (2014 - Sekarang)</h2>
+            
+            <!-- Timeline Item: 2022 - DisArtFest (Workshop) -->
+            <div class="timeline-item flex justify-center md:justify-end mb-12 relative w-full">
+                <div class="w-full md:w-1/2 p-4 md:pl-16">
+                    <div class="card bg-white p-6 rounded-xl shadow-lg border-l-4 border-accentB transform hover:shadow-xl transition duration-300">
+                        <!-- Gambar dari pti.jpg -->
+                        <img src="pti.jpg" alt="Dokumentasi Workshop Seni Lukis 2022" class="timeline-image">
+                        
+                        <span class="text-xs font-semibold uppercase text-gray-500">2022</span>
+                        <h3 class="text-2xl font-bold text-darkBlue mb-2 mt-1">Workshop Seni Lukis & DisArtFest</h3>
+                        <p class="text-gray-600 mb-4">Serangkaian kegiatan <strong>workshop</strong> seni lukis untuk mengasah kemampuan ekspresi peserta neurodivergen, bagian dari DisArtFest (Yayasan PTI) di Spectrum School. Dilakukan setelah workshop <strong>after school</strong> selama Ramadhan oleh Artabilitas.</p>
+                        <p class="text-sm font-semibold text-gray-700 mb-3">Kolaborasi: Yayasan Perempuan Tangguh Mandiri Indonesia (PTI)</p>
+                        <a href="https://drive.google.com/drive/folders/10ldCJNJuRgbP6oxyguc4EsvWGdrc5n9T?usp=sharing" target="_blank" class="inline-block px-4 py-2 bg-accentB text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition duration-150 text-sm">
+                            Lihat Dokumentasi Kegiatan
+                        </a>
+                    </div>
+                </div>
+                <!-- Timeline Dot -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-accentB rounded-full border-4 border-white hidden md:block"></div>
+            </div>
+
+            <!-- Timeline Item: Koleksi Virtual (Metaverse) -->
+            <div class="timeline-item flex justify-center md:justify-start mb-12 relative w-full">
+                <div class="w-full md:w-1/2 p-4 md:pr-16 md:order-1">
+                    <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accentA transform hover:shadow-xl transition duration-300">
+                         <!-- Gambar dari virtual gallery.png -->
+                        <img src="virtual gallery.png" alt="Screenshot Koleksi Virtual 3D" class="timeline-image">
+
+                        <span class="text-xs font-semibold uppercase text-gray-500">2020 - Sekarang</span>
+                        <h3 class="text-2xl font-bold text-darkBlue mb-2 mt-1">Koleksi Virtual 3D "A Journey in Artabilities"</h3>
+                        <p class="text-gray-600 mb-4">Museum virtual 3D yang mengkurasi dan mendigitalisasi karya-karya Artabilitas sejak 2014 (lukisan, batik, ilustrasi digital). Bukti komitmen kami pada inovasi kurasi masa depan.</p>
+                        <div class="space-y-3 sm:space-y-0 sm:space-x-3 flex flex-col sm:flex-row">
+                            <a href="https://spatial.io/s/620e287ef99759000186f6e5" target="_blank" class="inline-block px-4 py-2 bg-accentA text-white font-semibold rounded-full shadow-md hover:bg-red-600 transition duration-150 text-sm">
+                                Kunjungi The Artabilities Gallery
+                            </a>
+                            <a href="https://www.spatial.io/s/62104a63445c6500019eb057" target="_blank" class="inline-block px-4 py-2 bg-gray-400 text-white font-semibold rounded-full shadow-md hover:bg-gray-500 transition duration-150 text-sm">
+                                Galeri Fotografi Virtual
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Dot -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-accentA rounded-full border-4 border-white hidden md:block"></div>
+            </div>
+
+            <!-- Timeline Item: 2020 - Pameran Virtual -->
+            <div class="timeline-item flex justify-center md:justify-end mb-12 relative w-full">
+                <div class="w-full md:w-1/2 p-4 md:pl-16">
+                    <div class="card bg-white p-6 rounded-xl shadow-lg border-l-4 border-accentB transform hover:shadow-xl transition duration-300">
+                        <!-- Gambar dari Poster Pameran Virtual 2020.jpg -->
+                        <img src="Poster Pameran Virtual 2020.jpg" alt="Poster Pameran Virtual 360" class="timeline-image">
+                        
+                        <span class="text-xs font-semibold uppercase text-gray-500">2020</span>
+                        <h3 class="text-2xl font-bold text-darkBlue mb-2 mt-1">Pameran Virtual 360° "Semangat Kreatif Tak Pernah Padam"</h3>
+                        <p class="text-gray-600 mb-4">Inovasi di tengah pandemi. Pameran merayakan semangat berkarya seniman neurodivergent dalam format virtual 360° yang fokus pada subjek pandangan dunia seniman neurodivergen dan membuka lebih banyak pintu ekspresi artistik.</p>
+                        <div class="space-y-3 sm:space-y-0 sm:space-x-3 flex flex-col sm:flex-row">
+                            <a href="https://www.theasys.io/viewer/EH6WW8iQE8MSwAFCONDyS8oW4yXlsQ/" target="_blank" class="inline-block px-4 py-2 bg-accentB text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition duration-150 text-sm">
+                                Kunjungi Pameran Virtual
+                            </a>
+                            <a href="https://drive.google.com/file/d/1mIfezuYttCOaQQk6Beh0FeLpSTh5a8Ak/view?usp=drive_link" target="_blank" class="inline-block px-4 py-2 bg-gray-400 text-white font-semibold rounded-full shadow-md hover:bg-gray-500 transition duration-150 text-sm">
+                                Lihat Katalog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Dot -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-accentB rounded-full border-4 border-white hidden md:block"></div>
+            </div>
+
+            <!-- Timeline Item: 2019 - Warisan Budaya -->
+            <div class="timeline-item flex justify-center md:justify-start mb-12 relative w-full">
+                <div class="w-full md:w-1/2 p-4 md:pr-16 md:order-1">
+                    <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accentA transform hover:shadow-xl transition duration-300">
+                        <!-- Gambar dari IMG20190820124640.jpg -->
+                        <img src="IMG20190820124640.jpg" alt="Foto Karya Tembikar di Museum Seni Rupa & Keramik" class="timeline-image">
+                        
+                        <span class="text-xs font-semibold uppercase text-gray-500">2019</span>
+                        <h3 class="text-2xl font-bold text-darkBlue mb-2 mt-1">Koleksi Museum Seni Rupa & Keramik</h3>
+                        <p class="text-gray-600 mb-4">Karya tembikar <strong>"Gotong Royong"</strong> menjadi koleksi edukasi permanen Museum Seni Rupa & Keramik Jakarta. Pencapaian yang menegaskan nilai artistik karya neurodivergen.</p>
+                        <p class="text-sm font-semibold text-gray-700">Tanggal: 20 Agustus 2019</p>
+                        <p class="text-sm font-semibold text-gray-700">Lokasi: Museum Seni Rupa & Keramik Jakarta</p>
+                        <span class="inline-block px-3 py-1 mt-3 bg-red-100 text-red-600 rounded-full text-xs font-bold">Pencapaian Institusional</span>
+                    </div>
+                </div>
+                <!-- Timeline Dot -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-accentA rounded-full border-4 border-white hidden md:block"></div>
+            </div>
+
+            <!-- Timeline Item: 2018 - Melalui Lensa -->
+            <div class="timeline-item flex justify-center md:justify-end mb-12 relative w-full">
+                <div class="w-full md:w-1/2 p-4 md:pl-16">
+                    <div class="card bg-white p-6 rounded-xl shadow-lg border-l-4 border-accentB transform hover:shadow-xl transition duration-300">
+                        <!-- Gambar dari Selamat Datang di Duniaku.jpg -->
+                        <img src="Selamat Datang di Duniaku.jpg" alt="Foto Dokumentasi Pameran Fotografi 2018" class="timeline-image">
+
+                        <span class="text-xs font-semibold uppercase text-gray-500">2018</span>
+                        <h3 class="text-2xl font-bold text-darkBlue mb-2 mt-1">Pameran Fotografi "Selamat Datang di Duniaku"</h3>
+                        <p class="text-gray-600 mb-4">Pameran fotografi karya anak berkebutuhan khusus di Galeri Foto Jurnalistik ANTARA. Menunjukkan ekspresi melalui medium fotografi (Fotografi Sebagai Media Ekspresi) <strong>100% hasil penjualan karya</strong> didonasikan untuk program seni sekolah.</p>
+                        <div class="space-y-3 sm:space-y-0 sm:space-x-3 flex flex-col sm:flex-row">
+                             <a href="https://drive.google.com/drive/folders/1nXI-zvrAwWdGM0JeO5LoaEByF-XVhN37?usp=sharing" target="_blank" class="inline-block px-4 py-2 bg-accentB text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition duration-150 text-sm">
+                                Lihat Foto Dokumentasi & Liputan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Dot -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-accentB rounded-full border-4 border-white hidden md:block"></div>
+            </div>
+            
+            <!-- Timeline Item: 2014 - Langkah Awal -->
+            <div class="timeline-item flex justify-center md:justify-start mb-12 relative w-full">
+                <div class="w-full md:w-1/2 p-4 md:pr-16 md:order-1">
+                    <div class="card bg-white p-6 rounded-xl shadow-lg border-r-4 border-accentA transform hover:shadow-xl transition duration-300">
+                        <!-- Gambar dari Poster Langkah Awal.jpg -->
+                        <img src="Poster Langkah Awal.jpg" alt="Foto Dokumentasi Pameran Perdana Langkah Awal" class="timeline-image">
+                        
+                        <span class="text-xs font-semibold uppercase text-gray-500">2014</span>
+                        <h3 class="text-2xl font-bold text-darkBlue mb-2 mt-1">Pameran Perdana "Langkah Awal"</h3>
+                        <p class="text-gray-600 mb-4">Pameran Perdana Seni Rupa Neurodivergen lukisan, batik, dan tembikar di Galeri Aprilia. Fokus pada edukasi dan kesadaran. Inilah <strong>awal mula</strong> perjalanan Artabilitas.</p>
+                        <div class="space-y-3 sm:space-y-0 sm:space-x-3 flex flex-col sm:flex-row">
+                            <a href="https://drive.google.com/file/d/1_NL0VZEvLnaueAuCz0REDDpR0NjAyUnG/view?usp=sharing" target="_blank" class="inline-block px-4 py-2 bg-accentA text-white font-semibold rounded-full shadow-md hover:bg-red-600 transition duration-150 text-sm">
+                                Lihat Katalog Pameran
+                            </a>
+                             <a href="https://web.facebook.com/media/set/?set=a.10153044384956509&type=3" target="_blank" class="inline-block px-4 py-2 bg-gray-400 text-white font-semibold rounded-full shadow-md hover:bg-gray-500 transition duration-150 text-sm">
+                                Dokumentasi Kegiatan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Timeline Dot -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-accentA rounded-full border-4 border-white hidden md:block"></div>
+            </div>
+
+            <!-- Penutup Timeline -->
+            <div class="text-center mt-16">
+                <h3 class="text-2xl font-bold text-darkBlue"><a href="https://bridgesnotwalls.netlify.app/">Masa Depan: Bridges Not Walls (2026)</a></h3>
+              <p class="text-gray-600 max-w-xl mx-auto mt-2">Menuju pameran yang akan membawa karya ini ke kancah seni rupa <strong>mainstream</strong>.          </p>
+          </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Artabilitas. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mb-4">Komunitas Seni Rupa Neurodivergen Indonesia.</p>
+            <a href="https://artabilitas.wixsite.com/artabilitas" class="text-accentB hover:text-accentA transition duration-150 text-sm" target="_blank">Kunjungi Website Resmi Artabilitas</a>
+        </div>
+    </footer>
+</body>
+</html>
